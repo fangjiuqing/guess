@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>竞猜</title>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <style type="text/css">
+        body {
+            background:url('images/content-bg.png') no-repeat;
+            background-size: cover;
+            background-color: #106051;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top-nav">
+        <div class="left">
+            <p class="circle">
+                <a>jonathan（大点儿...</a>
+            </p>
+        </div>
+
+        <div class="right">
+            <p class="circle">
+                <a href="history.html">我的竞猜</a>
+            </p>
+        </div>
+    </div>
+    <div class="content">
+        <ul class="question">
+            <li class="transform">
+                1、明显是一只法牛啊。
+            </li>
+            <li class="transform">
+                2、应该是一只柯基啦。
+            </li>
+            <li class="transform">
+                3、绝对是一只贵宾犬。
+            </li>
+            <li class="transform active">
+                4、以上答案都不正确。
+            </li>
+        </ul>
+
+        <button class="transform submit-btn" type="submit">提交</button>
+    </div>
+
+    <script type="text/javascript">
+        $(function() {
+            $('.question li').on('click' , function() {
+                $('.question li').each(function (idx , ele) {
+                    $(ele).removeClass('active');
+                });
+
+                $(this).addClass('active');
+            });
+        });
+    </script>
+</body>
+
+</html>

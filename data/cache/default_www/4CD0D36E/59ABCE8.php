@@ -1,0 +1,8 @@
+<?php
+/**
+ *  created by RGX v1.0.0 file cache
+ *  @time 2019-01-07 21:16:48
+ */
+
+if (1546870008 < REQUEST_TIME) return false;
+return '{"data":{"city":"南京","temphigh":"6","templow":"3","updatetime":"2019-01-07 21:10:08","tempnow":"4","sendibletemp":"2","winddirect":"东风","windpower":"2级","humidity":"93","sunrise":"07:06","sunset":"17:15","weather":"阴","week":"星期一","nl":null,"date":"2019-01-07","index":[{"name":"洗车指数","level":"不宜","msg":"雨(雪)水和泥水会弄脏您的爱车，不适宜清洗车辆。"},{"name":"穿衣指数","level":"冷","msg":"天冷了，防风保暖，巧搭帽子、围巾、手套既保暖又时尚。"},{"name":"感冒指数","level":"可能","msg":"感冒可能发生，体质较弱的童鞋们要注意了，要及时增减衣物，适时补充水分，坚持锻炼身体。"},{"name":"紫外线强度指数","level":"最弱","msg":"辐射弱，涂擦SPF8-12防晒护肤品。"},{"name":"运动指数","level":"不适宜","msg":"气压有点偏低了，较不适宜在户外进行剧烈运动。"},{"name":"化妆指数","level":"保湿","msg":"天气寒冷，多补水，选用滋润保湿型化妆品，使用润唇膏。"}],"pm25":{"aqi":68,"co":8,"o3":4,"pm10":56,"pm2_5":68,"quality":"良","so2":2,"no2":26,"updatetime":"2019-01-07 20:00:00"},"daily":[{"date":"2019-01-07","week":"星期一","sunrise":"07:06","sunset":"17:15","temphigh":"6","templow":"3","weather":"小雨"},{"date":"2019-01-08","week":"星期二","sunrise":"07:06","sunset":"17:15","temphigh":"5","templow":"1","weather":"阴"},{"date":"2019-01-09","week":"星期三","sunrise":"07:06","sunset":"17:15","temphigh":"2","templow":"1","weather":"大雪"},{"date":"2019-01-10","week":"星期四","sunrise":"07:06","sunset":"17:15","temphigh":"5","templow":"1","weather":"小雨"},{"date":"2019-01-11","week":"星期五","sunrise":"07:06","sunset":"17:15","temphigh":"6","templow":"4","weather":"小雨"},{"date":"2019-01-12","week":"星期六","sunrise":"07:06","sunset":"17:15","temphigh":"8","templow":"3","weather":"阴"},{"date":"2019-01-06","week":"星期日","sunrise":"07:06","sunset":"17:15","temphigh":"4","templow":"1","weather":"多云"}]},"status":0,"msg":"ok"}';

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>{$page_title ? : '竞猜'}</title>
+    <script src="{__CTPL_URL__}js/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{__CTPL_URL__}css/style.css" />
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            // 禁止浏览器上拉下滑
+            $('body').on('touchmove', function (event) {event.preventDefault();});
+            function stopScrolling(event) {
+                event.preventDefault();
+            }
+            document.addEventListener('touchmove',stopScrolling,false);
+        })
+    </script>
+

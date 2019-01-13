@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>{$page_title}</title>
+    <script src="{__CTPL_URL__}js/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{__STATIC_URL__}css/weui/jquery-weui.css" />
+    <link rel="stylesheet" type="text/css" href="{__STATIC_URL__}css/weui/lib/weui.min.css" />
+    <link rel="stylesheet" type="text/css" href="{__CTPL_URL__}css/style.css" />
+    <style type="text/css">
+        body {
+            background:url('{$data[tm_bg_image]}') no-repeat;
+            background-size: cover;
+            background-color: #106051;
+        }
+    </style>
+</head>
+
+<body>
+    {include common/userinfo.inc}
+    <div class="content">
+        <form action="{url:'index-quiz-~'}" id="sform">
+            <input type="hidden" name="data[qz_tm_id]" value="{$data['tm_id']}" id="qz_tm_id" />
+            <input type="hidden" name="data[qz_tm_name]" value="{$data['tm_name']}" id="qz_tm_name" />
+            <input type="hidden" name="data[qz_tm_answer]" id="qz_tm_answer" />
+        </form>
+
+        <ul class="question">
+            {foreach $data['tm_answer'] $k $v}
+            <li class="transform">
+                {$v}
+            </li>
+            {/foreach}
+        </ul>
+
+        <a class="transform submit-btn" type="submit" id="submit-answer">提交</a>
+    </div>
+
+    <script type="text/javascript" src="{__STATIC_URL__}js/jquery-weui.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            var allow_submit = false;
+
+            $('.question li').on('click' , function() {
+                $('.question li').each(function (idx , ele) {
+                    $(ele).removeClass('active');
+                });
+
+                $(this).addClass('active');
+                $('#qz_tm_answer').val($(this).text());
+                allow_submit = true;
+            });
+
+            //  提交
+            $('#submit-answer').on('click' , function () {
+                if ( allow_submit ) {
+                    var sfrom = $('#sform');
+                    var url   = sfrom.attr('action');
+                    var data  = sfrom.serialize();
+                    $.ajax({
+                         url: url,
+                         type: 'POST',
+                         dataType: 'json',
+                         data: data,
+                         timeout: 1000,
+                         cache: false,
+                         success: function(res) { //成功执行方法
+                            if ( res.code == 0 ) {
+                                $.alert(res.msg , "成功" , function() {
+                                    location.href = res.url;
+                                });
+                            }else{
+                                $.alert(res.msg , "错误");
+                            }
+                         }
+                     })
+                }else {
+                    $.alert('请先选择答案！' , "警告");
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

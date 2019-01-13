@@ -1,0 +1,8 @@
+<?php
+/**
+ *  created by RGX v1.0.0 file cache
+ *  @time 2018-03-23 13:43:29
+ */
+
+if (1521786809 < REQUEST_TIME) return false;
+return '{"data":{"city":null,"temphigh":"25","templow":"15","updatetime":"2018-03-23 13:19:00","tempnow":"24","sendibletemp":"24","winddirect":"北风","windpower":"2级","humidity":"32","sunrise":"06:26","sunset":"18:36","weather":"晴","week":"星期五","nl":null,"date":"2018-03-23","index":[{"name":"化妆指数","level":"控油","msg":"建议用露质面霜打底，水质无油粉底霜，透明粉饼，粉质胭脂。"},{"name":"运动指数","level":"不适宜","msg":"气压有点偏低了，较不适宜在户外进行剧烈运动。"},{"name":"感冒指数","level":"易发","msg":"感冒容易发生，少去人群密集的场所有利于降低感冒的几率。"},{"name":"洗车指数","level":"非常适宜","msg":"洗车后，可至少保持4天车辆清洁，非常适宜洗车。"},{"name":"穿衣指数","level":"热","msg":"天气较热，衣物精干简洁，室内酌情添加空调衫。"},{"name":"紫外线强度指数","level":"强","msg":"涂擦SPF大于15、PA+防晒护肤品。"}],"pm25":{"aqi":0,"co":6,"o3":43,"pm10":55,"pm2_5":36,"quality":"良","so2":3,"no2":9,"updatetime":"2018-03-23 13:00:00"},"daily":[{"date":"2018-03-23","week":"星期五","sunrise":"06:26","sunset":"18:36","temphigh":"25","templow":"15","weather":"晴"},{"date":"2018-03-24","week":"星期六","sunrise":"06:26","sunset":"18:36","temphigh":"25","templow":"17","weather":"多云"},{"date":"2018-03-25","week":"星期日","sunrise":"06:26","sunset":"18:36","temphigh":"25","templow":"18","weather":"阵雨"},{"date":"2018-03-26","week":"星期一","sunrise":"06:26","sunset":"18:36","temphigh":"27","templow":"19","weather":"多云"},{"date":"2018-03-27","week":"星期二","sunrise":"06:26","sunset":"18:36","temphigh":"28","templow":"19","weather":"多云"},{"date":"2018-03-28","week":"星期三","sunrise":"06:26","sunset":"18:36","temphigh":"27","templow":"21","weather":"多云"},{"date":"2018-03-22","week":"星期四","sunrise":"06:26","sunset":"18:36","temphigh":"24","templow":"14","weather":"晴"}]},"status":0,"msg":"ok"}';

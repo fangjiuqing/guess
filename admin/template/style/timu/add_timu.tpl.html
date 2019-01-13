@@ -1,0 +1,59 @@
+<div class="modal inmodal" id="add-fee" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content animated bounceInRight">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">关闭</span>
+                </button>
+                <h4 class="modal-title">新增题目</h4>
+                <small class="font-bold">【Tips：背景图需要按照尺寸要求；题目答案一行一个】</small>
+            </div>
+            <div class="modal-body">
+                <form action="{url:'timu-save-~'}" method="POST" id="savefee" class="form-horizontal">
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <label class="col-sm-2 control-label">题目名称</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" name="data[tm_name]"  placeholder="题目名称" id="tm_name" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <label class="col-sm-2 control-label">题目状态</label>
+                            <div class="col-sm-10">
+                                <select class="form-control" name="data[tm_status]">
+                                    <option value="active">激活</option>
+                                    <option value="close">关闭</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <label class="col-sm-2 control-label">背景图片</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" name="data[tm_bg_image]"  placeholder="背景图片地址，需要浏览器可直接访问" id="tm_bg_image" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <label class="col-sm-2 control-label">题目答案</label>
+                            <div class="col-sm-10">
+                                <textarea name="data[tm_answer]" class="form-control" rows="4"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-white" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary" id="save-fee-submit">保存</button>
+            </div>
+        </div>
+    </div>
+</div>

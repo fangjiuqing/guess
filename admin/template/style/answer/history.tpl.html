@@ -1,0 +1,67 @@
+<!--{include common/meta.inc.html}-->
+<link href="{__CTPL_URL__}css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+<!-- Data Tables -->
+<link href="{__CTPL_URL__}css/plugins/dataTables/dataTables.bootstrap.css" rel="stylesheet">
+<style type="text/css">
+    .fixed-height {
+        min-height: 329px;
+    }
+</style>
+</head>
+<body class="gray-bg">
+    <div class="wrapper wrapper-content animated fadeInUp">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="ibox float-e-margins fixed-height">
+                    <div class="ibox-title">
+                        <h5>历史竞猜</h5>
+                    </div>
+                    <div class="ibox-content">
+                        <table class="table table-striped table-bordered table-hover dataTables">
+                            <thead>
+                                <tr>
+                                    <th class="text-center" width="6%">序号</th>
+                                    <th>用户昵称</th>
+                                    <th>用户头像</th>
+                                    <th>答题题目</th>
+                                    <th>答题答案</th>
+                                    <th>答题时间</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                {foreach $list $k $v}
+                                <tr>
+                                    <td class="text-center">{$v['qz_id']}</td>
+                                    <td>
+                                        {$v['qz_nickname']}
+                                    </td>
+                                    <td>
+                                        <img src="{$v['qz_headimgurl']}" style="width:64px;" />
+                                    </td>
+                                    <td>{$v['qz_tm_name']}</td>
+                                    <td>{$v['qz_tm_answer']}</td>
+                                    <td>{$v['qz_create_time']|date,Y-m-d H:i:s}</td>
+                                </tr>
+                                {/foreach}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--{include timu/add_timu.tpl.html}-->
+
+    <!--{include common/js.inc.html}-->
+    <script src="{__CTPL_URL__}js/plugins/dataTables/jquery.dataTables.js"></script>
+    <script src="{__CTPL_URL__}js/plugins/dataTables/dataTables.bootstrap.js"></script>
+
+    <script type="text/javascript">
+        $(function() {
+            $(".dataTables").dataTable();
+        });
+    </script>
+</body>
+
+</html>
